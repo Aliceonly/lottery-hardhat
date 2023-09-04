@@ -11,6 +11,11 @@ error Raffle__TransferFailed();
 error Raffle__NotOpen();
 error Raffle__upkeepNotNeeded(uint256 currentBalance, uint256 numPlayers, uint256 raffleState);
 
+
+/** @title Raffle Contract
+    @author Aliceonly
+    @dev implements ChainlinkVRF v2 and Chainlink Automation
+ */
 contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
     enum RaffleState {
         OPEN,
@@ -108,4 +113,25 @@ contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
     function getRecentWinner() public view returns (address) {
         return s_rencentWinner;
     }
+
+    function getRaffleState() public view returns (RaffleState) {
+        return s_raffleState;
+    }
+
+    function getNumWords() public pure returns (uint256){
+        return NUM_WORDS;
+    }
+
+    function getNumberOfPlayers() public view returns (uint256) {
+        return s_players.length;
+    }
+
+    function getLatestTimeStamp() public view returns (uint256) {
+        return s_lastTimeStamp;
+    }
+
+    function getRequestConfirmations() public pure returns(uint256) {
+        return REQUEST_CONFIRMATIONS;
+    }
+
 }
