@@ -17,12 +17,14 @@ module.exports = {
     networks: {
         hardhat: {
             chainId: 31337,
-            blockConfirmations: 1,
+        },
+        localhost: {
+            chainId: 31337,
         },
         sepolia: {
             chainId: 11155111,
-            blockConfirmations: 6,
             url: SEPOLIA_RPC_URL,
+            saveDeployments: true,
             accounts: [PRIVATE_KEY],
         },
     },
@@ -30,6 +32,7 @@ module.exports = {
     namedAccounts: {
         deployer: {
             default: 0,
+            1:0,
         },
         player: {
             default: 1,
