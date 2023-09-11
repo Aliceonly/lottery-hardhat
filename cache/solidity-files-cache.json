@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Aliceonly\\Desktop\\project\\lottery\\contracts\\Raffle.sol": {
-      "lastModificationDate": 1693828193549,
-      "contentHash": "ed39d8800afbb7cd12112660c7eb92b7",
+      "lastModificationDate": 1694393944044,
+      "contentHash": "41dcb3e5f31c05579d9861a61f999b82",
       "sourceName": "contracts/Raffle.sol",
       "solcConfig": {
         "version": "0.8.19",
